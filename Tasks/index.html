@@ -4,42 +4,511 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>[Company Name] | Craft Your Georgian Escape</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              sand: {
+                50: '#fdf6ee',
+                100: '#f7eadc',
+                200: '#f0d9c0',
+                300: '#e2ba8d',
+                400: '#d99d60',
+                500: '#c97c35',
+                600: '#a15f26',
+              },
+            },
+            fontFamily: {
+              heading: ['"Playfair Display"', 'serif'],
+              body: ['"Inter"', 'sans-serif'],
+            },
+            boxShadow: {
+              glow: '0 20px 60px -20px rgba(201, 124, 53, 0.55)',
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./style.css" />
   </head>
-  <body>
-    <div class="mainContainer">
-      <div class="myTasks">
-        <h2>My Tasks</h3>
-        <input id="input" type="text here" />
-        <button id="addBtn">Add</button>
-      </div>
-
-      <h4>To Do List</h4>
-      <div class="toDoList">
-        <div class="toDoContainer">
-<div class="dot"> &#x2022;</div>
- <p class="newTask">new task</p>
-<div class="icons">
-    <button class="doneBtn">&#9989;</button>
-    <button class="deleteBtn">&#10060;</button>
-</div>
+  <body class="bg-sand-50 text-slate-900 font-body">
+    <header class="sticky top-0 z-40 backdrop-blur bg-sand-50/80 border-b border-slate-200/70">
+      <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+        <div class="flex items-center gap-3">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-sand-200 text-lg font-bold text-sand-600 shadow-inner">[CN]</span>
+          <div>
+            <p class="text-sm uppercase tracking-[0.3em] text-slate-500">[Company Name]</p>
+            <p class="text-base font-semibold text-slate-800">AI-Crafted Georgian Journeys</p>
+          </div>
         </div>
-       
-        
+        <nav class="hidden items-center gap-8 text-sm font-medium text-slate-700 md:flex">
+          <a class="hover:text-sand-500 transition" href="#destinations">Destinations</a>
+          <a class="hover:text-sand-500 transition" href="#tours">Tours</a>
+          <a class="hover:text-sand-500 transition" href="#ai-chat">AI Travel Chat</a>
+          <a class="hover:text-sand-500 transition" href="#blog">Stories</a>
+          <a class="hover:text-sand-500 transition" href="#about">About</a>
+        </nav>
+        <a
+          href="#contact"
+          class="hidden rounded-full bg-sand-500 px-5 py-2 text-sm font-semibold text-white shadow-glow transition hover:bg-sand-600 md:inline-flex"
+          >Plan with Us</a
+        >
       </div>
+    </header>
 
-      <H4>Done</H4>
-      <div class="done">
-        <div class="doneContainer">
-          <div class="dot">&#x2022;</div>
-            <p class="doneTask">task</p>
-      <div class="icons">
-    <button class="doneBtn">&#9989;</button>
-    <button class="deleteBtn">&#10060;</button>
+    <main>
+      <section
+        class="relative overflow-hidden bg-gradient-to-br from-sand-50 via-white to-sand-100"
+      >
+        <div class="parallax-hero absolute inset-0"></div>
+        <div class="relative mx-auto flex max-w-7xl flex-col gap-12 px-6 pb-24 pt-20 md:flex-row md:items-center">
+          <div class="w-full md:w-1/2">
+            <span class="inline-flex items-center gap-2 rounded-full bg-white/70 px-4 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-sand-500 shadow">Proudly Local • Expertly Guided</span>
+            <h1 class="mt-6 font-heading text-4xl font-bold text-slate-900 md:text-5xl">
+              Craft Your Georgian Escape
+            </h1>
+            <p class="mt-4 max-w-xl text-lg text-slate-700">
+              Blend Tbilisi nights, Kakheti vineyards, and alpine air with a tap. Our AI Travel Assistant pairs local know-how with your vibe to design unforgettable itineraries.
+            </p>
+            <div class="mt-8 flex flex-wrap items-center gap-4">
+              <a
+                href="#ai-chat"
+                class="rounded-full bg-sand-500 px-6 py-3 text-sm font-semibold uppercase tracking-wide text-white shadow-glow transition hover:-translate-y-0.5 hover:bg-sand-600"
+              >Start Your AI-Crafted Tour</a>
+              <button class="group flex items-center gap-2 text-sm font-semibold text-sand-600 transition hover:text-sand-700" id="scrollToDestinations">
+                Explore Top Destinations
+                <span class="inline-flex h-8 w-8 items-center justify-center rounded-full border border-sand-200 transition group-hover:translate-x-1">→</span>
+              </button>
+            </div>
+            <div class="mt-10 grid grid-cols-1 gap-4 text-sm text-slate-600 md:grid-cols-2">
+              <div class="rounded-2xl bg-white/70 p-4 shadow-lg shadow-sand-200/40 backdrop-blur">
+                <p class="text-xs uppercase tracking-[0.2em] text-sand-500">Brand Voice</p>
+                <ul class="mt-3 space-y-1">
+                  <li>Friendly, expert, modern, proudly local.</li>
+                  <li>Short, vivid sentences with emotional cues.</li>
+                  <li>Values: hospitality, authenticity, adventure, sustainability, personalization.</li>
+                  <li>Do: celebrate culture, use sensory imagery, invite action.</li>
+                  <li>Don't: sound corporate, overpromise, skip Georgian touches.</li>
+                </ul>
+              </div>
+              <div class="rounded-2xl bg-white/70 p-4 shadow-lg shadow-sand-200/40 backdrop-blur">
+                <p class="text-xs uppercase tracking-[0.2em] text-sand-500">Taglines</p>
+                <ul class="mt-3 grid list-disc gap-1 pl-5 text-slate-700">
+                  <li>See Georgia Your Way.</li>
+                  <li>Your Story. Our Country.</li>
+                  <li>Toast the Caucasus with Us.</li>
+                  <li>Mountains, Wine, and Your Moment.</li>
+                  <li>From Tbilisi Lights to Svaneti Peaks.</li>
+                  <li>Crafted Tours, Georgian Hearts.</li>
+                  <li>Chase Sunsets over Kakheti.</li>
+                  <li>Feel Georgia, Fully.</li>
+                  <li>Adventure Poured by Locals.</li>
+                  <li>Journey Deeper into Georgia.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="relative w-full md:w-1/2">
+            <div class="glass-card">
+              <img
+                src="https://images.unsplash.com/photo-1521208914987-3f3c5fe92c04?auto=format&fit=crop&w=900&q=80"
+                alt="Tbilisi skyline"
+                class="h-80 w-full rounded-3xl object-cover shadow-2xl"
+              />
+              <div class="absolute -bottom-12 left-1/2 w-full max-w-xs -translate-x-1/2 rounded-3xl bg-white/80 p-6 shadow-xl backdrop-blur">
+                <p class="text-xs uppercase tracking-[0.3em] text-sand-500">AI Snapshot</p>
+                <p class="mt-2 text-sm font-semibold text-slate-800">
+                  “Three nights in Tbilisi, vineyard tastings in Kakheti, heli-ride to Kazbegi, and a supra feast to finish.”
+                </p>
+                <p class="mt-3 text-xs text-slate-500">Generated in 12 seconds • Tailored for 4 friends</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="ai-chat" class="bg-white py-20">
+        <div class="mx-auto grid max-w-7xl gap-12 px-6 md:grid-cols-[1.1fr_0.9fr] md:items-center">
+          <div>
+            <p class="text-xs uppercase tracking-[0.3em] text-sand-500">AI Travel Chat</p>
+            <h2 class="mt-4 font-heading text-3xl font-semibold text-slate-900">Plan your trip with our AI Travel Assistant</h2>
+            <p class="mt-4 max-w-2xl text-lg text-slate-700">
+              Tell us your mood — nightlife, wine, hikes — and watch your itinerary come alive. The assistant guides you through dates, pace, interests, stays, and budget before serving a shareable trip plan.
+            </p>
+            <ul class="mt-6 space-y-3 text-sm text-slate-600">
+              <li>• Opening greeting: “Hey there! I’m your virtual guide in Georgia 🇬🇪...”</li>
+              <li>• Journey through dates, group size, pace, interests, stays, and budget.</li>
+              <li>• Personalized logic for nature lovers, wine enthusiasts, culture seekers, and adventurers.</li>
+              <li>• Summary with days, regions, vehicle, hotels, and price estimate.</li>
+              <li>• CTA: “Would you like me to show you this tour on the website or send it to your email?”</li>
+            </ul>
+            <button
+              class="mt-8 rounded-full bg-sand-500 px-6 py-3 text-sm font-semibold uppercase tracking-wide text-white shadow-glow transition hover:-translate-y-0.5 hover:bg-sand-600"
+              id="openChat"
+            >Chat with the AI Guide</button>
+          </div>
+          <div class="relative">
+            <div class="rounded-3xl bg-white/80 p-6 shadow-2xl backdrop-blur">
+              <div class="flex items-center justify-between">
+                <div>
+                  <p class="text-xs uppercase tracking-[0.3em] text-sand-500">Conversation Flow</p>
+                  <p class="mt-2 text-sm font-semibold text-slate-800">Guided onboarding → Itinerary magic → Human handoff</p>
+                </div>
+                <span class="rounded-full bg-sand-500/20 px-3 py-1 text-xs font-semibold text-sand-600">Multi-language</span>
+              </div>
+              <ol class="mt-6 space-y-3 text-sm text-slate-600">
+                <li>1. Greeting & vibe question.</li>
+                <li>2. Ask travel dates & group size.</li>
+                <li>3. Check pace & interests.</li>
+                <li>4. Confirm accommodations & budget.</li>
+                <li>5. Summarize with AI itinerary card.</li>
+                <li>6. Offer Save Tour, Talk to Agent, Pay Deposit.</li>
+              </ol>
+              <div class="mt-6 rounded-2xl bg-gradient-to-r from-sand-100 to-white p-4">
+                <p class="text-xs uppercase tracking-[0.25em] text-sand-500">Stack</p>
+                <p class="mt-2 text-sm font-semibold text-slate-800">Next.js · TypeScript · OpenAI · LangChain · Valtio · Stripe · PayPal</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="destinations" class="bg-sand-50 py-20">
+        <div class="mx-auto max-w-7xl px-6">
+          <div class="md:flex md:items-end md:justify-between">
+            <div>
+              <p class="text-xs uppercase tracking-[0.3em] text-sand-500">Top Destinations</p>
+              <h2 class="mt-4 font-heading text-3xl font-semibold">From Tbilisi lights to alpine peaks</h2>
+            </div>
+            <p class="mt-4 max-w-xl text-sm text-slate-600 md:mt-0">
+              Hover to feel the breeze. Every card celebrates a signature vibe with glassmorphism, micro-animations, and curated imagery.
+            </p>
+          </div>
+          <div class="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            <!-- Cards generated by JS -->
+          </div>
+        </div>
+      </section>
+
+      <section id="tours" class="bg-white py-20">
+        <div class="mx-auto max-w-7xl px-6">
+          <div class="md:flex md:items-start md:justify-between">
+            <div>
+              <p class="text-xs uppercase tracking-[0.3em] text-sand-500">Tours & Filters</p>
+              <h2 class="mt-4 font-heading text-3xl font-semibold">Find the tour that speaks your language</h2>
+            </div>
+            <p class="mt-4 max-w-xl text-sm text-slate-600 md:mt-0">
+              Filter by region, theme, duration, and budget to see tailored adventures. Each card highlights hero imagery, highlights, and price bands with an inviting CTA.
+            </p>
+          </div>
+          <div class="mt-10 rounded-3xl bg-sand-50/80 p-6 shadow-xl backdrop-blur">
+            <div class="grid gap-4 md:grid-cols-4">
+              <div class="flex flex-col gap-2">
+                <label class="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500" for="regionFilter">Region</label>
+                <select id="regionFilter" class="filter-select">
+                  <option value="all">All</option>
+                </select>
+              </div>
+              <div class="flex flex-col gap-2">
+                <label class="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500" for="themeFilter">Theme</label>
+                <select id="themeFilter" class="filter-select">
+                  <option value="all">All</option>
+                </select>
+              </div>
+              <div class="flex flex-col gap-2">
+                <label class="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500" for="durationFilter">Duration</label>
+                <select id="durationFilter" class="filter-select">
+                  <option value="all">All</option>
+                </select>
+              </div>
+              <div class="flex flex-col gap-2">
+                <label class="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500" for="budgetFilter">Budget</label>
+                <select id="budgetFilter" class="filter-select">
+                  <option value="all">All</option>
+                </select>
+              </div>
+            </div>
+            <div class="tour-cards mt-10 grid gap-6 lg:grid-cols-2"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-sand-50 py-20" id="tour-detail">
+        <div class="mx-auto max-w-7xl px-6">
+          <div class="grid gap-12 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
+            <div>
+              <p class="text-xs uppercase tracking-[0.3em] text-sand-500">Tour Detail Page</p>
+              <h2 class="mt-4 font-heading text-3xl font-semibold">Immersive detail built for dreamers</h2>
+              <p class="mt-4 text-lg text-slate-700">
+                Showcase gallery sliders, day-by-day accordion, interactive map, and heartfelt testimonials. Invite guests to modify with AI at any moment.
+              </p>
+              <ul class="mt-6 grid gap-4 text-sm text-slate-600 md:grid-cols-2">
+                <li class="rounded-2xl bg-white/80 p-4 shadow">Hero gallery with parallax transitions.</li>
+                <li class="rounded-2xl bg-white/80 p-4 shadow">Accordion itinerary for each day’s vibe.</li>
+                <li class="rounded-2xl bg-white/80 p-4 shadow">Interactive map with must-see pins.</li>
+                <li class="rounded-2xl bg-white/80 p-4 shadow">Testimonial slider with local quotes.</li>
+              </ul>
+              <button class="mt-8 rounded-full bg-sand-500 px-6 py-3 text-sm font-semibold uppercase tracking-wide text-white shadow-glow transition hover:bg-sand-600">Ask AI to modify tour</button>
+            </div>
+            <div class="rounded-3xl bg-white/80 p-6 shadow-2xl backdrop-blur">
+              <div class="grid gap-4">
+                <div class="rounded-2xl bg-sand-100 p-4">
+                  <p class="text-xs uppercase tracking-[0.25em] text-sand-600">Sample Itinerary Snapshot</p>
+                  <p class="mt-2 text-sm font-semibold text-slate-800">8 Days · Tbilisi → Kakheti → Kazbegi → Gudauri</p>
+                  <p class="mt-2 text-xs text-slate-600">Vehicle: Private minivan · Hotels: Boutique wine resort & mountain lodge · Price: From $2,450 pp</p>
+                </div>
+                <div class="rounded-2xl bg-sand-100 p-4">
+                  <p class="text-xs uppercase tracking-[0.25em] text-sand-600">Personalization Logic</p>
+                  <ul class="mt-2 space-y-2 text-xs text-slate-700">
+                    <li>Nature lovers → Kazbegi + Svaneti with 4x4 access.</li>
+                    <li>Wine enthusiasts → Kakheti & boutique qvevri hotels.</li>
+                    <li>Culture seekers → Tbilisi, Mtskheta, Kutaisi heritage stays.</li>
+                    <li>Adventure travelers → Gudauri slopes + local guides.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="blog" class="bg-white py-20">
+        <div class="mx-auto max-w-7xl px-6">
+          <div class="md:flex md:items-end md:justify-between">
+            <div>
+              <p class="text-xs uppercase tracking-[0.3em] text-sand-500">Travel Tips Blog</p>
+              <h2 class="mt-4 font-heading text-3xl font-semibold">Stories to fuel your suitcase</h2>
+            </div>
+            <p class="mt-4 max-w-xl text-sm text-slate-600 md:mt-0">
+              A 3-month editorial calendar focused on high-intent keywords — optimized titles, descriptions, and CTA funnels feeding the AI assistant.
+            </p>
+          </div>
+          <div class="blog-grid mt-12 grid gap-8 lg:grid-cols-3">
+            <!-- Blog posts generated by JS -->
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="bg-sand-50 py-20">
+        <div class="mx-auto max-w-7xl px-6">
+          <div class="grid gap-16 lg:grid-cols-[1.1fr_0.9fr]">
+            <div>
+              <p class="text-xs uppercase tracking-[0.3em] text-sand-500">About [Company Name]</p>
+              <h2 class="mt-4 font-heading text-3xl font-semibold">Local hearts, global storytellers</h2>
+              <p class="mt-4 text-lg text-slate-700">
+                Born from supra tables and summit trails, our team blends Georgian hospitality with tech-forward tools. From AI to human concierges, every guest is a friend.
+              </p>
+              <div class="mt-10 space-y-6">
+                <div class="timeline-step">
+                  <span class="timeline-dot"></span>
+                  <div>
+                    <p class="text-sm font-semibold text-slate-800">2015 — Supra Beginnings</p>
+                    <p class="text-sm text-slate-600">Hosted first bespoke tours for friends visiting from Berlin.</p>
+                  </div>
+                </div>
+                <div class="timeline-step">
+                  <span class="timeline-dot"></span>
+                  <div>
+                    <p class="text-sm font-semibold text-slate-800">2019 — Mountain Expansion</p>
+                    <p class="text-sm text-slate-600">Partnered with Svaneti guides to open heli-hiking adventures.</p>
+                  </div>
+                </div>
+                <div class="timeline-step">
+                  <span class="timeline-dot"></span>
+                  <div>
+                    <p class="text-sm font-semibold text-slate-800">2023 — AI Travel Companion</p>
+                    <p class="text-sm text-slate-600">Launched multilingual assistant bridging guests and local experts.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="grid gap-8 md:grid-cols-2">
+              <div class="rounded-3xl bg-white/80 p-6 shadow-lg backdrop-blur">
+                <img
+                  src="https://images.unsplash.com/photo-1531572753322-ad063cecc140?auto=format&fit=crop&w=600&q=80"
+                  alt="Guide"
+                  class="h-40 w-full rounded-2xl object-cover"
+                />
+                <p class="mt-4 text-lg font-semibold text-slate-800">Nino • Founder</p>
+                <p class="text-sm text-slate-600">“Every guest should feel the warmth of a Georgian supra.”</p>
+              </div>
+              <div class="rounded-3xl bg-white/80 p-6 shadow-lg backdrop-blur">
+                <img
+                  src="https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&w=600&q=80"
+                  alt="Mountain guide"
+                  class="h-40 w-full rounded-2xl object-cover"
+                />
+                <p class="mt-4 text-lg font-semibold text-slate-800">Giorgi • Mountain Lead</p>
+                <p class="text-sm text-slate-600">“Kazbegi sunrises change how you see the world.”</p>
+              </div>
+              <div class="rounded-3xl bg-white/80 p-6 shadow-lg backdrop-blur md:col-span-2">
+                <img
+                  src="https://images.unsplash.com/photo-1508154048109-de555266b50a?auto=format&fit=crop&w=1200&q=80"
+                  alt="Wine region"
+                  class="h-48 w-full rounded-2xl object-cover"
+                />
+                <p class="mt-4 text-lg font-semibold text-slate-800">Our Promise</p>
+                <p class="text-sm text-slate-600">Hospitality, authenticity, adventure, sustainability, personalization — woven into every itinerary.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="seo" class="bg-white py-20">
+        <div class="mx-auto max-w-7xl px-6">
+          <div class="md:flex md:items-end md:justify-between">
+            <div>
+              <p class="text-xs uppercase tracking-[0.3em] text-sand-500">SEO & Content Strategy</p>
+              <h2 class="mt-4 font-heading text-3xl font-semibold">Own the searches, win the hearts</h2>
+            </div>
+            <p class="mt-4 max-w-xl text-sm text-slate-600 md:mt-0">
+              From high-intent blog series to optimized landing pages and AI-powered CTAs, every story leads to a booked journey.
+            </p>
+          </div>
+          <div class="mt-10 grid gap-10 lg:grid-cols-2">
+            <div class="rounded-3xl bg-sand-50/80 p-6 shadow-xl backdrop-blur">
+              <h3 class="text-lg font-semibold text-slate-800">3-Month Editorial Calendar</h3>
+              <ul class="mt-4 space-y-3 text-sm text-slate-600" id="blogIdeas"></ul>
+            </div>
+            <div class="space-y-6">
+              <div class="rounded-3xl bg-sand-50/80 p-6 shadow-xl backdrop-blur">
+                <h3 class="text-lg font-semibold text-slate-800">Landing Page Keyword Clusters</h3>
+                <ul class="mt-4 space-y-2 text-sm text-slate-600" id="keywordClusters"></ul>
+              </div>
+              <div class="rounded-3xl bg-sand-50/80 p-6 shadow-xl backdrop-blur">
+                <h3 class="text-lg font-semibold text-slate-800">Meta Titles & Descriptions</h3>
+                <ul class="mt-4 space-y-3 text-sm text-slate-600" id="metaInfo"></ul>
+              </div>
+              <div class="rounded-3xl bg-sand-50/80 p-6 shadow-xl backdrop-blur">
+                <h3 class="text-lg font-semibold text-slate-800">Internal Linking & CTAs</h3>
+                <ul class="mt-4 space-y-2 text-sm text-slate-600">
+                  <li>Blog posts → landing pages → AI travel chat.</li>
+                  <li>Landing pages → tour detail pages & deep dives.</li>
+                  <li>CTAs: "Launch AI Travel Assistant", "Chat for Kakheti wine nights", "Plan your Caucasus journey".</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="ads" class="bg-sand-50 py-20">
+        <div class="mx-auto max-w-7xl px-6">
+          <p class="text-xs uppercase tracking-[0.3em] text-sand-500">Social Sparks</p>
+          <h2 class="mt-4 font-heading text-3xl font-semibold">Ad captions ready for Instagram & Facebook</h2>
+          <div class="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            <div class="rounded-3xl bg-white/80 p-6 shadow-xl backdrop-blur">
+              <ul class="space-y-3 text-sm text-slate-700">
+                <li>"Sip Kakheti sunsets, chase Kazbegi dawns. 🍷⛰️ #VisitGeorgia #GeorgiaTours"</li>
+                <li>"Tbilisi nights, Svaneti trails — design your dream trip! ✨ #TravelCaucasus"</li>
+                <li>"From wine cellars to cliff monasteries, we tailor it all. 🍇🏞️ #GeorgiaTours"</li>
+                <li>"Your Georgian story starts here. Ready? 🇬🇪❤️ #VisitGeorgia #TravelCaucasus"</li>
+                <li>"Custom tours, local hearts, unforgettable moments. 💫 #GeorgiaTours"</li>
+              </ul>
+            </div>
+            <div class="rounded-3xl bg-white/80 p-6 shadow-xl backdrop-blur">
+              <h3 class="text-lg font-semibold text-slate-800">Slogan Generator</h3>
+              <ul class="mt-4 space-y-2 text-sm text-slate-600">
+                <li>Georgia: Where Every Toast Tells a Tale.</li>
+                <li>Mountain Air, City Lights, One Georgian Heart.</li>
+                <li>Follow the Wine Roads, Find Yourself.</li>
+                <li>Beyond Borders, Deep in Georgia.</li>
+                <li>Your Adventure, Our Georgian Welcome.</li>
+                <li>Caucasus Peaks, Warm Georgian Streets.</li>
+                <li>Let Georgia Stir Your Soul.</li>
+                <li>From Supra Tables to Summit Trails.</li>
+                <li>Feel the Pulse of the Caucasus.</li>
+                <li>Crafted Journeys, Georgian Spirit.</li>
+              </ul>
+            </div>
+            <div class="rounded-3xl bg-white/80 p-6 shadow-xl backdrop-blur">
+              <h3 class="text-lg font-semibold text-slate-800">Marketing Ecosystem</h3>
+              <p class="mt-4 text-sm text-slate-600">
+                Brand identity: amber, deep blue, alpine green, Playfair Display & Inter typography. Website: Next.js architecture with shared components and Tailwind tokens. AI chat flows orchestrate onboarding, itinerary loops, and agent handoff.
+              </p>
+              <p class="mt-3 text-sm text-slate-600">
+                Admin dashboard: tours management, AI approvals, customer chat, analytics. Integrations: bookings, payments, CRM, multilingual support.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer id="contact" class="bg-slate-900 text-sand-50">
+      <div class="mx-auto max-w-7xl px-6 py-16">
+        <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-[0.8fr_1.2fr]">
+          <div>
+            <p class="text-xs uppercase tracking-[0.3em] text-sand-300">Stay in touch</p>
+            <h3 class="mt-4 font-heading text-3xl font-semibold">Ready to craft your Georgian escape?</h3>
+            <p class="mt-4 text-sm text-sand-100">
+              Message us on WhatsApp, hop into the AI chat, or call our Tbilisi studio. We tailor tours in English, Georgian, and beyond.
+            </p>
+            <div class="mt-8 flex flex-wrap items-center gap-4">
+              <a href="tel:+995555123456" class="rounded-full bg-sand-500 px-5 py-2 text-sm font-semibold text-white transition hover:bg-sand-600">+995 555 123 456</a>
+              <a href="https://wa.me/995555123456" class="rounded-full border border-sand-400 px-5 py-2 text-sm font-semibold text-sand-200 transition hover:bg-sand-400 hover:text-slate-900">WhatsApp Us</a>
+            </div>
+          </div>
+          <div class="grid gap-6 md:grid-cols-2">
+            <div>
+              <h4 class="text-sm font-semibold uppercase tracking-[0.2em] text-sand-300">Quick Links</h4>
+              <ul class="mt-3 space-y-2 text-sm text-sand-100/80">
+                <li><a class="hover:text-white" href="#destinations">Destinations</a></li>
+                <li><a class="hover:text-white" href="#tours">Tours</a></li>
+                <li><a class="hover:text-white" href="#blog">Blog</a></li>
+                <li><a class="hover:text-white" href="#ai-chat">AI Assistant</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="text-sm font-semibold uppercase tracking-[0.2em] text-sand-300">Newsletter</h4>
+              <p class="mt-3 text-sm text-sand-100/80">Sign up for monthly travel inspiration and new tour drops.</p>
+              <form class="mt-4 flex gap-3">
+                <input type="email" placeholder="Email address" class="w-full rounded-full border border-sand-400/60 bg-slate-900/60 px-4 py-2 text-sm text-white placeholder:text-sand-200 focus:border-sand-300 focus:outline-none" />
+                <button type="submit" class="rounded-full bg-sand-500 px-4 py-2 text-sm font-semibold text-white transition hover:bg-sand-600">Join</button>
+              </form>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-     </div>
+      <div class="sticky-footer">
+        <div class="flex items-center gap-4">
+          <span class="text-sm font-semibold text-slate-900">Call us</span>
+          <a href="tel:+995555123456" class="rounded-full bg-sand-500 px-4 py-2 text-sm font-semibold text-white">+995 555 123 456</a>
+        </div>
+        <div class="flex items-center gap-4">
+          <a href="https://wa.me/995555123456" class="rounded-full border border-sand-500 px-4 py-2 text-sm font-semibold text-slate-900">WhatsApp</a>
+          <button class="rounded-full bg-sand-500 px-4 py-2 text-sm font-semibold text-white" id="footerChatButton">AI Chat</button>
+        </div>
+      </div>
+    </footer>
+
+    <div id="chatWidget" class="chat-widget hidden">
+      <div class="chat-header">
+        <div>
+          <p class="text-xs uppercase tracking-[0.3em] text-sand-200">AI Travel Assistant</p>
+          <p class="text-sm font-semibold text-white">Hey there! I’m your virtual guide in Georgia 🇬🇪.</p>
+        </div>
+        <button class="text-white" id="closeChat">✕</button>
+      </div>
+      <div class="chat-body">
+        <div class="chat-message">
+          <p class="text-xs text-sand-100/90">Tell me what kind of adventure you want — nature, culture, wine, or all of them?</p>
+        </div>
+      </div>
+      <div class="chat-footer">
+        <input type="text" placeholder="Share your vibe..." class="chat-input" />
+        <button class="chat-send">Send</button>
+      </div>
     </div>
 
     <script src="./app.js"></script>
